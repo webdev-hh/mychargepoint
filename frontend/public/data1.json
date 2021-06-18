@@ -1,0 +1,130 @@
+{
+  "status": "ok",
+  "chargelocations": [
+    {
+      "chargepoints": [
+        {
+          "type": "CCS",
+          "power": 50,
+          "count": 1
+        },
+        {
+          "type": "CHAdeMO",
+          "power": 50,
+          "count": 1
+        },
+        {
+          "type": "Typ2",
+          "power": 22,
+          "count": 1
+        }
+      ],
+      "ge_id": 445,
+      "name": "Alsterperle",
+      "address": {
+        "city": "Hamburg",
+        "country": "Deutschland",
+        "postcode": "22087",
+        "street": "Eduard-Rhein-Ufer 1"
+      },
+      "coordinates": {
+        "lat": 53.567822,
+        "lng": 10.016089
+      },
+      "network": "Stromnetz Hamburg",
+      "url": "//www.goingelectric.de/stromtankstellen/Deutschland/Hamburg/Alsterperle-Eduard-Rhein-Ufer-1/445/",
+      "fault_report": false,
+      "verified": true
+    },
+    {
+      "chargepoints": [
+        {
+          "type": "Typ2",
+          "power": 22,
+          "count": 1
+        },
+        {
+          "type": "Typ2",
+          "power": 11,
+          "count": 1
+        },
+        {
+          "type": "Schuko",
+          "power": 2.3,
+          "count": 2
+        }
+      ],
+      "ge_id": 452,
+      "name": "U-Bahn Volksdorf",
+      "address": {
+        "city": "Hamburg",
+        "country": "Deutschland",
+        "postcode": "22359",
+        "street": "Kattjahren 4"
+      },
+      "coordinates": {
+        "lat": 53.651859,
+        "lng": 10.162911
+      },
+      "network": "Stromnetz Hamburg",
+      "url": "//www.goingelectric.de/stromtankstellen/Deutschland/Hamburg/U-Bahn-Volksdorf-Kattjahren-4/452/",
+      "fault_report": false,
+      "verified": true
+    },
+    {
+      "chargepoints": [
+        {
+          "type": "Typ2",
+          "power": 22,
+          "count": 2
+        },
+        {
+          "type": "Schuko",
+          "power": 2.3,
+          "count": 2
+        }
+      ],
+      "ge_id": 453,
+      "name": "S-Bahn Poppenbüttel",
+      "address": {
+        "city": "Hamburg",
+        "country": "Deutschland",
+        "postcode": "22393",
+        "street": "Stormarnplatz 1"
+      },
+      "coordinates": {
+        "lat": 53.651653,
+        "lng": 10.094765
+      },
+      "network": "Stromnetz Hamburg",
+      "url": "//www.goingelectric.de/stromtankstellen/Deutschland/Hamburg/S-Bahn-Poppenbuettel-Stormarnplatz-1/453/",
+      "fault_report": false,
+      "verified": true
+    },
+    {
+      "chargepoints": [
+        {
+          "type": "Typ2",
+          "power": 22,
+          "count": 2
+        }
+      ],
+      "ge_id": 687,
+      "name": "innogy Ladesäule",
+      "address": {
+        "city": "Hamburg",
+        "country": "Deutschland",
+        "postcode": "22297",
+        "street": "Überseering 40"
+      },
+      "coordinates": {
+        "lat": 53.602158,
+        "lng": 10.016829
+      },
+      "network": "innogy eRoaming",
+      "url": "//www.goingelectric.de/stromtankstellen/Deutschland/Hamburg/innogy-Ladesaeule-Ueberseering-40/687/",
+      "fault_report": false,
+      "verified": true
+    }
+  ]
+}  
