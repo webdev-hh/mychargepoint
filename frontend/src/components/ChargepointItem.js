@@ -4,7 +4,10 @@ export default function ChargepointItem({ chargepoint }) {
   return (
     <Wrapper>
       <h2>{chargepoint.name}</h2>
-      <div>{chargepoint.ge_id}</div>
+      <div>
+        <a href={chargepoint.url}>Detail Page</a>
+      </div>
+      <div>ID: {chargepoint.ge_id}</div>
       <div>
         {chargepoint.address.postcode} {chargepoint.address.city},{" "}
         {chargepoint.address.street}
@@ -14,9 +17,9 @@ export default function ChargepointItem({ chargepoint }) {
 }
 
 const Wrapper = styled.div`
-  color: #939ea9;
+  color: #e9edf1;
   flex: 1 1 250px;
-  background: #373e46;
+  background: #9ba1a7;
   border: darkgrey 2px solid;
   border-radius: 6px;
   padding: 12px;
@@ -24,12 +27,12 @@ const Wrapper = styled.div`
   text-align: center;
 
   a:link {
-    color: #3770c2;
+    color: darkblue;
     text-decoration: none;
   }
 
   a:visited {
-    color: #4b7ab6;
+    color: darkviolet;
     text-decoration: none;
   }
 `;
