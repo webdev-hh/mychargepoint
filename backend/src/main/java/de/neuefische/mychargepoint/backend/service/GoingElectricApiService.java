@@ -1,15 +1,10 @@
 package de.neuefische.mychargepoint.backend.service;
 
-import de.neuefische.mychargepoint.backend.model.Chargepoint;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -21,7 +16,7 @@ public class GoingElectricApiService {
     private String countryValue = "DE";
     private final String  latitudeKey = "lat=";
     private float latitudeValue = 53.5957976f;
-    private final String  longitudeKey = "lat=";
+    private final String  longitudeKey = "lng=";
     private float longitudeValue = 10.1469108f;
     private final String radiusKey = "radius=";
     private int radiusValue = 10;
@@ -39,7 +34,7 @@ public class GoingElectricApiService {
         this.restTemplate = restTemplate;
     }
 
-    public List<Chargepoint> getChargepoints() {
+    public List<String> getChargepoints() {
         String requestString = chargepointApi + "/?key=" + apiKey + "&"
                 + countryKey + countryValue + "&"
                 + latitudeKey + latitudeValue + "&"
@@ -48,10 +43,21 @@ public class GoingElectricApiService {
                 + minPowerKey + minPowerValue + "&"
                 + freeparkingKey + freeparkingValue + "&"
                 + orderbyKey + orderbyValue;
-        ResponseEntity<Chargepoint[]> response = restTemplate.getForEntity(requestString, Chargepoint[].class);
+        //ResponseEntity<Chargepoint[]> response = restTemplate.getForEntity(requestString, Chargepoint[].class);
+     // JSONObject jsonObject = restTemplate.getForObject(requestString, JSONObject.class);
+      ResponseEntity<String> response
+                = restTemplate.getForEntity(requestString , String.class);
 
-        if (response.getBody() != null) {
-            return Arrays.asList(response.getBody());
+
+       //        System.out.println(jsonObject);
+      // System.out.println(jsonObject.toString());
+       // System.out.println(response);
+
+        /*List<String> chargepoint = JsonPath.read(jsonObject, "$.chargelocations.name");
+        System.out.println(chargepoint);
+*/
+        if (response != null ) {
+            return List.of(response.getBody());
         }
         return List.of();
     }
