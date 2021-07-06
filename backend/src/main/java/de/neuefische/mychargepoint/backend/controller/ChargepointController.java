@@ -1,5 +1,6 @@
 package de.neuefische.mychargepoint.backend.controller;
 
+import de.neuefische.mychargepoint.backend.model.api.Chargelocations;
 import de.neuefische.mychargepoint.backend.service.GoingElectricApiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -22,7 +23,7 @@ public class ChargepointController {
 
     @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping()
-    public List<String> listChargepoints () {
+    public List<Chargelocations> listChargepoints () {
         return goingElectricApiService.getChargepoints();
     }
 }
